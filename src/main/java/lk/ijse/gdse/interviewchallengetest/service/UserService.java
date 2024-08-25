@@ -1,6 +1,6 @@
-package service;
+package lk.ijse.gdse.interviewchallengetest.service;
 
-import dto.UserDTO;
+import lk.ijse.gdse.interviewchallengetest.dto.UserDTO;
 
 import java.util.List;
 

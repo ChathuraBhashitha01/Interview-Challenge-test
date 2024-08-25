@@ -1,10 +1,10 @@
-package controller;
+package lk.ijse.gdse.interviewchallengetest.controller;
 
-import dto.UserDTO;
+import lk.ijse.gdse.interviewchallengetest.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import service.UserService;
+import lk.ijse.gdse.interviewchallengetest.service.UserService;
 
 import java.util.List;
 

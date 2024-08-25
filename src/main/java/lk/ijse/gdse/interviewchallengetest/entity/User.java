@@ -1,4 +1,4 @@
-package entity;
+package lk.ijse.gdse.interviewchallengetest.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
