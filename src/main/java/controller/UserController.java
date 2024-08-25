@@ -1,8 +1,10 @@
 package controller;
 
 import dto.UserDTO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import service.UserService;
 
 import java.util.List;
 
@@ -11,29 +13,32 @@ import java.util.List;
 @CrossOrigin
 public class UserController {
 
+    @Autowired
+    private UserService userService;
+
     @PostMapping("createUser")
     public void createUser(UserDTO userDTO) {
-
+        userService.save(userDTO);
     }
 
     @GetMapping("listUser")
     public List<UserDTO> listUser(UserDTO userDTO) {
-        return null;
+        return userService.listUsers();
     }
 
     @GetMapping("getUserDetails")
-    public UserDTO getUserDetails(UserDTO userDTO) {
-        return null;
+    public UserDTO getUserDetails(String uid) {
+        return userService.getUserDetails(uid);
     }
 
     @PatchMapping("updateUser")
     public void updateUser(UserDTO userDTO) {
-
+        userService.update(userDTO);
     }
 
     @PatchMapping("deleteUser")
-    public void deleteUser(UserDTO userDTO) {
-
+    public void deleteUser(String uid) {
+        userService.delete(uid);
     }
 
 
